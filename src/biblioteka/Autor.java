@@ -1,19 +1,23 @@
 package biblioteka;
 
 public class Autor {
+
+
     private String imie;
     private String nazwisko;
     private int rokUrodzenia;
+    private final Plec plec;
 
-    private enum plec {
-        MEZCZYZNA,
-        KOBIETA;
-    }
 
-    public Autor(String imie, String nazwisko, int rokUrodzenia) {
+    public Autor(String imie, String nazwisko, int rokUrodzenia, Plec plecDoDodania) {
         this.imie = imie;
         this.nazwisko = nazwisko;
         this.rokUrodzenia = rokUrodzenia;
+        this.plec = plecDoDodania;
+    }
+
+    public Plec getPlec() {
+        return plec;
     }
 
     public String getImie() {
@@ -46,6 +50,7 @@ public class Autor {
                 "imie='" + imie + '\'' +
                 ", nazwisko='" + nazwisko + '\'' +
                 ", rokUrodzenia=" + rokUrodzenia +
+                ", plec=" + plec +
                 '}';
     }
 }
