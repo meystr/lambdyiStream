@@ -38,9 +38,10 @@ public class Main {
         biblioteka.dodajKsiazki(ksiazka8);
         biblioteka.dodajKsiazki(ksiazka9);
         biblioteka.dodajKsiazki(ksiazka10);
+
         biblioteka.getKsiazki().stream()
-                .filter(ksiazka -> ksiazka.getTytul().toString().length()>0)
-                .forEach(System.out::println);
+                .filter(ksiazka -> ksiazka.getTytul().length()>0)
+                .forEach(ksiazka -> System.out.println(ksiazka.getTytul()));
 
 
 
